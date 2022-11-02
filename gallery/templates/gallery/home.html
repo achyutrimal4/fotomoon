@@ -7,10 +7,94 @@
 
 
 {% block content %}
+{% include 'navbar.html' %}
 
-<h1>
-    Home
-</h1>
-<a href="{% url 'add_photo' %}">Add photo</a> <br>
-<a href="{% url 'login' %}">Admin Login</a>
+
+
+
+<!--details-->
+<div class="details" id="details">
+    <h1>
+        Footmon Details
+    </h1>
+    <a href="{% url 'add_blogs' %}">Add blogs</a>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates aspernatur, voluptate ut maxime maiores
+        doloremque?
+    </p>
+
+    <div class="card-section">
+        <div class="founder">
+            <img src="https://english.onlinekhabar.com/wp-content/uploads/2020/11/married-couple.jpg" alt="">
+            <p>Founder</p>
+        </div>
+        <div class="portfolio">
+            <img src="https://english.onlinekhabar.com/wp-content/uploads/2020/11/married-couple.jpg" alt="">
+            <p>Our Portfolio</p>
+        </div>
+        <div class="contact">
+            <img src="https://english.onlinekhabar.com/wp-content/uploads/2020/11/married-couple.jpg" alt="">
+            <p>Reach Us</p>
+        </div>
+        <div class="blogs">
+            <img src="https://english.onlinekhabar.com/wp-content/uploads/2020/11/married-couple.jpg" alt="">
+            <p>Blogs</p>
+        </div>
+    </div>
+</div>
+
+<!--Our Team-->
+<div class="team">
+    <h1>Meet our team</h1>
+
+    <div class="members">
+        <div class="member-card">
+            <img src="https://fotomoonnepal.com/upload_files/hari.jpg" alt="">
+            <p>Rabindra Mishra</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptate magni ullam libero! Nulla,
+                voluptas!</p>
+            <div class="social">
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="member-card">
+            <img src="https://fotomoonnepal.com/upload_files/hari.jpg" alt="">
+            <p>Rabindra Mishra</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptate magni ullam libero! Nulla,
+                voluptas!</p>
+            <div class="social">
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <img src="https://fotomoonnepal.com/upload_files/hari.jpg" alt="">
+            <p>Rabindra Mishra</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptate magni ullam libero! Nulla,
+                voluptas!</p>
+            <div class="social">
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="member-card">
+            <img src="https://fotomoonnepal.com/upload_files/hari.jpg" alt="">
+            <p>Rabindra Mishra</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptate magni ullam libero! Nulla,
+                voluptas!</p>
+            <div class="social">
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
+</div>
 {% endblock content %}
+

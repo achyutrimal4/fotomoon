@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block title %} Add a blog {% endblock title %}
+
+{% load static %}
+{% block styles %}
+    <!-- <link rel="stylesheet" href="{% static 'css/add_blog.css' %}" -->
+{% endblock styles  %}
+
+{% block content %}
+
+<form action="" method="POST" enctype="multipart/form-data" novalidate>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Add blog">
+</form>
+
+{% endblock content %}
