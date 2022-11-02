@@ -7,7 +7,7 @@
 
 
 {% block content %}
-{% include 'navbar.html' %}
+{% include 'home_navbar.html' %}
 
 
 
@@ -17,7 +17,8 @@
     <h1>
         Footmon Details
     </h1>
-    <a href="{% url 'add_blogs' %}">Add blogs</a>
+    <a href="{% url 'add_blogs' %}">Add blogs</a><br>
+    <a href="{% url 'add_photo' %}">Add Photo</a>
     <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates aspernatur, voluptate ut maxime maiores
         doloremque?

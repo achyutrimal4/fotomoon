@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from . forms import PhotoForm
+from .models import Photo
 
 # Create your views here.
 def home(request):
@@ -15,9 +16,13 @@ def add_photo(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Photo was successfully uploaded.')
-            return redirect('add_photo')
+            return redirect('gallery')
         else:
             form = PhotoForm(request.POST, request.FILES)
     context = {'form': form}
     return render (request, 'gallery/add_photo.html', context)
 
+def gallery(request):
+    gallery = Photo.objects.all().order_by('-uploaded')
+    context = {'gallery': gallery}
+    return  render (request, 'gallery/gallery.html', context)
