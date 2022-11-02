@@ -12,7 +12,15 @@
     {% endblock styles %}
 </head>
 <body>
+    {% include 'navbar.html' %}
+
     {% block content %}
     {% endblock content %}
+
+
+    {% include 'footer.html' %}
+
+    {% block script %}
+    {% endblock script %}
 </body>
 </html>
