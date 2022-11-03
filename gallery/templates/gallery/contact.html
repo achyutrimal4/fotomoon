@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .address {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-info {
+        width: 47.5%;
+    }
+
+    iframe {
+        border: .1em solid grey;
+        border-radius: .15em;
+        width: 45%;
+        height: 25em;
+    }
+
+    .info-box {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        margin: .55em 0;
+        padding: .25em 0;
+    }
+
+    .info-box p {
+        margin: 0;
+        margin-left: 1em;
+    }
+    
+    .message{
+        margin-top: 2.5em;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input,
+    textarea {
+        box-sizing: border-box;
+        font-size: .9em;
+        padding: .75em .75em;
+        outline: none;
+        margin: .35em 0;
+        border-radius: .25em;
+        border: none;
+        background-color: rgba(206, 206, 206, 0.445);
+    }
+
+    input:last-of-type {
+        background-color: rgb(212, 0, 255);
+        color: white;
+        font-weight: 600;
+        text-shadow: .15em .15em grey;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Contact Information</h1>
+        <div class="address">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14133.799429664536!2d85.3859418!3d27.6724878!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1667498000326!5m2!1sen!2snp"
+                allowfullscreen="1" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="text-info">
+                <h3>Details</h3>
+                <div class="info-box">
+                    <i class="fa-solid fa-map"></i>
+                    <p>Location of the office</p>
+                </div>
+                <div class="info-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>emailaddress@email.com</p>
+                </div>
+                <div class="info-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>1234567890</p>
+                </div>
+            </div>
+        </div>
+        <div class="message">
+            <h1>Drop a message</h1>
+            <form action="" method="post">
+                <input type="text" placeholder="Your Name..">
+                <input type="text" placeholder="Your Email..">
+                <textarea name="" id="" cols="50" rows="10" placeholder="Your Message.."></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
