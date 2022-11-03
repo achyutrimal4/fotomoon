@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<h1>Packages</h1>
+
+{% for package in packages %}
+<h2>{{package.title}}</h2>
+<img src="{{package.photo.url}}" alt="" width="10%">
+<p>{{package.description|slice:100}}</p>
+<p>{{package.available}}</p>
+{% if package.available %}
+<p style="color: green;">Available</p>
+{% else %}
+<p style="color:red">Unavailable</p> 
+{% endif %}
+<p>Rs.{{package.price}}</p>
+{% endfor %}
+
+{% endblock content %}

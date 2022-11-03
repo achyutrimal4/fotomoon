@@ -7,7 +7,14 @@ import uuid
 
 
 class Photo (models.Model):
+    PHOTO_TYPE = (
+        ('tall', 'Tall'),
+        ('wide', 'Wide'),
+        ('big', 'Big'),
+        ('Normal', 'Normal'),
+    )
     description = models.CharField(null=True, blank=False, max_length=250)
+    photo_type = models.CharField(max_length=200, choices = PHOTO_TYPE, null=True)
     photo = models.ImageField(upload_to='images/gallery/', blank=False)
     uploaded = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True,

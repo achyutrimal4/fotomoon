@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<h1>Manage Packages</h1>
+<form action="" method="POST" enctype="multipart/form-data" novalidate>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Add Package" name="" id="">
+
+</form>
+{% endblock content %}

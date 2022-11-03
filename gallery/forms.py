@@ -6,7 +6,7 @@ from .models import Photo, Portfolio, PhotoPortfolio
 class PhotoForm(ModelForm):
     class Meta:
         model=Photo
-        fields = ['description', 'photo']
+        fields = ['description', 'photo', 'photo_type']
         
 class PortfolioForm(ModelForm):
     class Meta:
