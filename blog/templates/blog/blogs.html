@@ -9,6 +9,10 @@
 
 
 {% block content %}
+
+{% include 'navbar.html' %}
+
+
     {% for blog in blogs %}
     <h1>{{blog.title}}</h1>
     <p>{{blog.author}}</p>

@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 from .forms import BlogForm
 from .models import Blog
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url='login')
 def addBlogs(request):
     form = BlogForm()
     if request.method == 'POST':

@@ -15,7 +15,7 @@
 
     <title></title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home_navbar.css' %}" />
 </head>
 
 <body>
@@ -27,13 +27,21 @@
             </div>
             <div class="navigation-pane">
                 <a href="">Home</a>
-                <a href="">Portfolio</a>
+                <a href="{% url 'portfolio' %}">Portfolio</a>
                 <a href="{% url 'gallery' %}">Gallery</a>
                 <a href="">About Us</a>
                 <a href="{% url 'view_blogs' %}">Blog</a>
                 <a href="">Packages</a>
                 <a href="">Contact</a>
-                <a href="">Login</a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'admin_panel' %}">Admin Panel</a>
+                <p>Hello, {{request.user.username}}</p>                
+                {% endif %} 
+                {% if not user.is_authenticated %}
+                <a href="{% url 'login' %}">Login</a>
+                {% endif %}
+
+               
             </div>
             <div class="social-media">
                 <i class="fa-brands fa-twitter"></i>

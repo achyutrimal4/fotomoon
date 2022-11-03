@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<h1>Admin Panel</h1>
+<a href="{% url 'add_blogs' %}">Manage blogs</a> <br>
+<a href="{% url 'add_photo' %}">Manage Photo</a> <br>
+<a href="{% url 'manage_portfolio' %}">Manage Portfolio</a> <br>
+<a href="">Manage Packages</a>
+{% endblock content %}

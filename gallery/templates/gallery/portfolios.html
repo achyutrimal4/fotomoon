@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block title %}Portfolio{% endblock title %}
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/portfolios.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+{% for portfolio in portfolio %}
+<p>{{ portfolio.name }}</p>
+<img src="{{portfolio.photo.url}}" alt="" width="100px"> <br>
+{% endfor %}
+
+<a href="{% url 'manage_portfolio' %}">Manage Portfolio</a>
+
+
+{% endblock content %}

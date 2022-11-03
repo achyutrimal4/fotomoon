@@ -37,9 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # 
     'gallery.apps.GalleryConfig',
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
+    'packages.apps.PackagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +76,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'fotomoon.wsgi.application'
+
 
 
 # Database

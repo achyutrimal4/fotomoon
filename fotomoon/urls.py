@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include('gallery.urls') ),
     path('users/', include('users.urls')),
     path('blog/', include('blog.urls')),
+    path('package/', include('packages.urls')),    
 ]
 
 
