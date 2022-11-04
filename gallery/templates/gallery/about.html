@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<h1>Know Us</h1>
+<div class="container">
+    <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg" alt="">
+    <div class="text">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, officia quis. Nobis, ullam. Natus id
+            maiores voluptatem. Cupiditate, recusandae cum rem sint dolorem reiciendis et.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus voluptatibus placeat doloribus
+            eligendi dicta. Officia!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti sequi dolorem illum illo ad saepe
+            optio earum obcaecati exercitationem neque.</p>
+
+        <div class="social">
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <!-- <h3> Contact developers:</h3>
+        <div class="developers">           
+            <span><p>Achyut Rimal</p> <p>9860558833</p> <p>achyutrimal4@gmail.com</p></span>
+            <span><p>Bishal Aryal</p><p>9860558833</p> <p>achyutrimal4@gmail.com</p></span>
+            <span><p>Sachin Khatri</p><p>9860558833</p> <p>achyutrimal4@gmail.com</p></span>
+        </div> -->
+    </div>
+   
+</div>
+
+{% endblock content %}

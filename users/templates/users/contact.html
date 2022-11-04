@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<div class="container">
+    <h1>Contact Information</h1>
+    <div class="address">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14133.799429664536!2d85.3859418!3d27.6724878!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1667498000326!5m2!1sen!2snp"
+            allowfullscreen="1" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="text-info">
+            <h3>Details</h3>
+            <div class="info-box">
+                <i class="fa-solid fa-map"></i>
+                <p>Location of the office</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-envelope"></i>
+                <p>emailaddress@email.com</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-phone"></i>
+                <p>1234567890</p>
+            </div>
+        </div>
+    </div>
+    <div class="message">
+        <h1>Drop a message</h1>
+        <form action="" method="post" novalidate>
+            {% csrf_token %}
+            {% for field in form %}
+            {{field.label_tag}}
+            {{field}}
+
+            {% for error in field.errors %}
+            <small style="color: red">{{error}}</small>
+            {% endfor %}
+            {% endfor %}
+            <input type="submit" value="Send Message" />
+        </form>
+
+    </div>
+</div>
+</div>
+{% endblock content %}

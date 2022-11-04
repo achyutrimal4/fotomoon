@@ -1,0 +1,25 @@
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input,
+    textarea {
+        box-sizing: border-box;
+        font-size: .9em;
+        padding: .75em .75em;
+        outline: none;
+        margin: .35em 0;
+        border-radius: .25em;
+        border: none;
+        background-color: rgba(206, 206, 206, 0.445);
+    }
+
+    input:last-of-type {
+        background-color: rgb(212, 0, 255);
+        color: white;
+        font-weight: 600;
+        text-shadow: .15em .15em grey;
+        cursor: pointer;
+    }

@@ -1,0 +1,55 @@
+@import url(../css/modules/form.css);
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.address {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-info {
+    width: 47.5%;
+}
+
+iframe {
+    border: .1em solid grey;
+    border-radius: .15em;
+    width: 45%;
+    height: 25em;
+}
+
+.info-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    margin: .55em 0;
+    padding: .25em 0;
+}
+
+.info-box p {
+    margin: 0;
+    margin-left: 1em;
+}
+
+.message {
+    margin-top: 2.5em;
+}

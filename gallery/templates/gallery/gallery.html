@@ -1,14 +1,33 @@
 {% extends 'main.html' %}
 
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+{% endblock styles %}
+
+
 {% block content %}
 
 {% include 'navbar.html' %}
 
-<h1>Gallery</h1>
+<h1>Captured <span>Moments</span></h1>
+    <div class="container">
+        {% for photo in gallery %}
 
-{% for photo in gallery %}
-<img src="{{photo.photo.url}}" alt="">
-{% endfor %}
+        {% if photo.photo_type == 'normal' %}
+        <div class="image">
+            <img src="{{photo.photo.url}}" alt="">
+            <p class="caption">{{photo.description | slice:30}}</p>
+        </div>
+        {% else %}
+        <div class="image {{photo.photo_type}}">
+            <img src="{{photo.photo.url}}" alt="">
+            <p class="caption">{{photo.description | slice:30}}</p>
+        </div>
+        {% endif %}
+        {% endfor %}       
+       
+    </div>
 
 
 {% endblock content %}

@@ -51,3 +51,6 @@ def managePortfolio(request):
             form = PortfolioForm(request.POST, request.FILES)
     context={'form':form}
     return render (request, 'gallery/managePortfolio.html', context)
+
+def about_us(request):
+    return render (request, 'gallery/about.html')

@@ -1,24 +1,31 @@
 {% extends 'main.html' %}
 
-{% block content %}
-<h1>Add photo</h1>
 
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/add_photo.css' %}">
+{% endblock styles %}
+
+
+{% block content %}
+
+<h1>Add photo</h1>
+<div class="container">
 
 
 <form action="" method="post" enctype="multipart/form-data" novalidate>
-    {% csrf_token %} {% for field in form %}
-    <div class="input-errors">
-      {{field.label_tag}}
-      <div class="input-fields">{{field}}</div>
+  {% csrf_token %} {% for field in form %}
+  {{field.label_tag}}
+  {{field}}
 
-      <div class="errors-div">
-        {% for error in field.errors %}
-        <small style="color: red">{{error}}</small>
-        {% endfor %}
-      </div>
-    </div>
-
+    {% for error in field.errors %}
+    <small style="color: red">{{error}}</small>
     {% endfor %}
-    <input type="submit" value="Add Photo" class="default-button--large" />
-  </form>
+  {% endfor %}
+  <input type="submit" value="Add Photo" class="default-button--large" />
+</form>
+
+</div>
+
+
 {% endblock content %}
