@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+</head>
+
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+   
+   * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container  {
+        width: 80%;
+        margin: 1.5em auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .packages{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5em;
+    }
+
+    .card{
+       width: 20em;
+       height: 16em;
+       border-radius: .25em;
+       box-sizing: border-box;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       box-shadow: .1em .1em .45em grey;
+       pointer-events: none;
+    }
+
+    .card p{
+        margin: .35em 0;
+    }
+
+    .card p:first-of-type{
+        font-weight: 600;
+    }
+
+    .card p:not(p:first-of-type){
+        color: grey;
+        font-weight: 500;
+    }
+
+    .offers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .offers .card{
+        margin: 0 1.5em;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Several Packages</h1>
+        <div class="packages">
+            <div class="card">
+                <p>Wedding Package</p>
+                <p>Budget 2500</p>
+                <p>Medium 5000</p>
+                <p>Premium 9500</p>
+            </div>
+            <div class="card">
+                <p>Modeling Packages</p>
+                <p>Budget 2500</p>
+                <p>Medium 5000</p>
+                <p>Premium 9500</p>
+            </div>
+            <div class="card">
+                <p>Small Event Packages</p>
+                <p>Budget 2500</p>
+                <p>Medium 5000</p>
+                <p>Premium 9500</p>
+            </div>
+            <div class="card">
+                <p>Photography Packages</p>
+                <p>Budget 2500</p>
+                <p>Medium 5000</p>
+                <p>Premium 9500</p>
+            </div>
+        </div>
+        <h1>Offers</h1>
+        <div class="offers">
+            <div class="card">
+                <p>Dashain and Tihar Offer</p>
+                <p>20% discount on all packages</p>
+            </div>
+            <div class="card">
+                <p>New Year Offer</p>
+                <p>20% discount on all packages</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
