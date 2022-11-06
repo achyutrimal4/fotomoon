@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--swiperjs-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!--fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
 </head>
@@ -27,201 +28,148 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        .swiper {
-            width: 600px;
-            height: 300px;
-        }
-
-
-        body {
-            width: 100vw;
-            height: 100vh;
-            overflow-x: hidden;
-        }
-
-        h1 {
+        h1{
             text-align: center;
-            margin: 2.5em 0;
+            margin: 2.5em  0;
         }
 
-        .container {
+        .swiper {
             width: 80%;
             height: 60vh;
-            box-sizing: border-box;
             margin: 2.5em auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        button {
-            border: none;
-            width: 3.5em;
-            height: 3.5em;
-            border-radius: 50%;
-            font-size: 1.25em;
             box-sizing: border-box;
-            padding: 0;
-            cursor: pointer;
-            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        button i {
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 45%;
+            height: 100%;
+            margin-right: 1.5em;
+        }
+
+        .swiper-slide .text {
+            width: 45%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text p {
+            margin: .65em 0;
+            font-weight: 400;
+        }
+
+        .text h3,
+        .text h4 {
+            align-self: flex-start;
             margin: 0;
         }
 
-        .previous {
-            left: 0.95%;
-            top: 50%;
-            transform: translateY(-50%);
+        .text h3 {
+            margin-bottom: .15em;
+            font-weight: 600;
         }
 
-        .next {
-            right: 0.95%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .content {
-            width: 75%;
-            height: 95%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            overflow: hidden;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-            display: none;
-        }
-
-        .active {
-            display: block;
-            display: flex;
-            z-index: 2;
-        }
-
-        .content img {
-            width: 58.5%;
-            height: 100%;
-        }
-
-        .text {
-            width: 38.5%;
-        }
-
-        .event-title {
-            width: 58.5%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            text-align: center;
-            background-color: rgba(201, 201, 201, 0.641);
+        .text h4 {
+            margin-bottom: 1.25em;
+            color: grey;
             font-weight: 500;
-            text-shadow: .15px .15px white;
-            font-size: 1.25em;
         }
     </style>
+
     <h1>Stories</h1>
-    <div class="swiper container">
+
+
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg'"
+                    alt="">
+                <div class="text">
+                    <h3>Mr. ABCD and Mrs. ABCD</h3>
+                    <h4>Abour their wedding</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam fuga culpa velit officiis. Nisi
+                        a quam eos, nostrum porro aut?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iste illum dolores at similique
+                        esse sapiente sed, quos laborum praesentium qui cupiditate dicta ut. Architecto dolores ipsum
+                        exercitationem minima doloremque nesciunt quos numquam necessitatibus ea.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deleniti adipisci, nam
+                        blanditiis enim quaerat!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg'"
+                    alt="">
+                <div class="text">
+                    <h3>Mr. ABCD and Mrs. ABCD</h3>
+                    <h4>Abour their wedding</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam fuga culpa velit officiis. Nisi
+                        a quam eos, nostrum porro aut?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iste illum dolores at similique
+                        esse sapiente sed, quos laborum praesentium qui cupiditate dicta ut. Architecto dolores ipsum
+                        exercitationem minima doloremque nesciunt quos numquam necessitatibus ea.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deleniti adipisci, nam
+                        blanditiis enim quaerat!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg'"
+                    alt="">
+                <div class="text">
+                    <h3>Mr. ABCD and Mrs. ABCD</h3>
+                    <h4>Abour their wedding</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam fuga culpa velit officiis. Nisi
+                        a quam eos, nostrum porro aut?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iste illum dolores at similique
+                        esse sapiente sed, quos laborum praesentium qui cupiditate dicta ut. Architecto dolores ipsum
+                        exercitationem minima doloremque nesciunt quos numquam necessitatibus ea.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deleniti adipisci, nam
+                        blanditiis enim quaerat!</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
-        <div class="swipper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg"
-                    alt="">
-                <div class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eaque nostrum harum beatae ipsam nam
-                        distinctio suscipit, officia deleniti nihil cumque quidem consectetur? Perspiciatis, delectus?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis praesentium reprehenderit
-                        corrupti
-                        libero ea velit non culpa eveniet, voluptatibus omnis voluptatum unde cumque a alias excepturi
-                        ab!
-                        Consequuntur, ipsum deleniti.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nemo expedita, qui rerum
-                        soluta
-                        facere.</p>
-                </div>
-
-                <div class="event-title">
-                    <p>This is event title0</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg"
-                    alt="">
-                <div class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eaque nostrum harum beatae ipsam nam
-                        distinctio suscipit, officia deleniti nihil cumque quidem consectetur? Perspiciatis, delectus?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis praesentium reprehenderit
-                        corrupti
-                        libero ea velit non culpa eveniet, voluptatibus omnis voluptatum unde cumque a alias excepturi
-                        ab!
-                        Consequuntur, ipsum deleniti.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nemo expedita, qui rerum
-                        soluta
-                        facere.</p>
-                </div>
-
-                <div class="event-title">
-                    <p>This is event title1</p>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg"
-                    alt="">
-                <div class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eaque nostrum harum beatae ipsam nam
-                        distinctio suscipit, officia deleniti nihil cumque quidem consectetur? Perspiciatis, delectus?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis praesentium reprehenderit
-                        corrupti
-                        libero ea velit non culpa eveniet, voluptatibus omnis voluptatum unde cumque a alias excepturi
-                        ab!
-                        Consequuntur, ipsum deleniti.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nemo expedita, qui rerum
-                        soluta
-                        facere.</p>
-                </div>
-
-                <div class="event-title">
-                    <p>This is event title2</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg"
-                    alt="">
-                <div class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eaque nostrum harum beatae ipsam nam
-                        distinctio suscipit, officia deleniti nihil cumque quidem consectetur? Perspiciatis, delectus?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis praesentium reprehenderit
-                        corrupti
-                        libero ea velit non culpa eveniet, voluptatibus omnis voluptatum unde cumque a alias excepturi
-                        ab!
-                        Consequuntur, ipsum deleniti.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nemo expedita, qui rerum
-                        soluta
-                        facere.</p>
-                </div>
-
-                <div class="event-title">
-                    <p>This is event title3</p>
-                </div>
-            </div>
-        </div>
     </div>
 
 
-    <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
         const swiper = new Swiper('.swiper', {
             // Optional parameters
-            direction: 'vertical',
+            direction: 'horizontal',
             loop: true,
 
             // If we need pagination
