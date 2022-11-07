@@ -429,10 +429,6 @@
         </div>
     </div>
 
-    <div class="services">
-        <h1>Our services</h1>
-    </div>
-
     <!--Our Team-->
     <div class="team">
         <h1>Meet our team</h1>
@@ -498,7 +494,25 @@
         </div>
     </div>
 
-   
+
+    <script>
+        document.querySelector('.founder').addEventListener('click', () => {
+            location.assign('about.html');
+        });
+
+        document.querySelector('.portfolio').addEventListener('click', () => {
+            location.assign('portfolio.html')
+        });
+
+        document.querySelector('.blogs').addEventListener('click', () => {
+            location.assign('blog.html');
+        });
+
+        document.querySelector('.contact').addEventListener('click', () => {
+            location.assign('contact.html');
+        }); 
+    </script>
+
 
 
 </body>
