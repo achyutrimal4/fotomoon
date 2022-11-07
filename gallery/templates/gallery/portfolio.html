@@ -90,28 +90,47 @@
     <div class="container">
         <h1>Our works</h1>
         <div class="card-section">
-            <div class="card big">
+            <div class="card big" id="wedding">
                 <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg"
                     alt="">
-                <p>Wedding Photography and Videos</p>
+                <p>Wedding</p>
             </div>
-            <div class="card wide">
+            <div class="card wide" id="modeling">
                 <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg"
                     alt="">
-                <p>Wedding Photography and Videos</p>
+                <p>Modeling</p>
             </div>
-            <div class="card">
+            <div class="card" id="maternity">
                 <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg"
                     alt="">
-                <p>Wedding Photography and Videos</p>
+                <p>Maternity</p>
             </div>
-            <div class="card">
+            <div class="card" id="engagement">
                 <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg"
                     alt="">
-                <p>Wedding Photography and Videos</p>
+                <p>Engagement</p>
             </div>
         </div>
     </div>
+
+
+    <script>
+           document.querySelector('#wedding').addEventListener('click', ()=>{
+            location.assign('wedding.html')
+           });
+
+           document.querySelector('#modeling').addEventListener('click', ()=>{
+            location.assign('modeling.html')
+           });
+           document.querySelector('#maternity').addEventListener('click', ()=>{
+            location.assign('maternity.html')
+           });
+           document.querySelector('#engagement').addEventListener('click', ()=>{
+            location.assign('engagement.html')
+           });
+
+    </script>
+
 </body>
 
 </html>
