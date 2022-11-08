@@ -4,15 +4,29 @@
 
 {% load static %}
 {% block styles %}
-    <!-- <link rel="stylesheet" href="{% static 'css/add_blog.css' %}" -->
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 {% endblock styles  %}
 
 {% block content %}
 
+{% include 'navbar.html' %}
+
+<div class="container">
+
+<h2>Add a blog</h2>
 <form action="" method="POST" enctype="multipart/form-data" novalidate>
     {% csrf_token %}
-    {{form.as_p}}
+    {% for field in form %}
+        {{field.label_tag}}
+        {{field}}
+
+    {% for error in field.errors %}
+    <small style="color: red">{{error}}</small>
+    {% endfor %}
+    {% endfor %}
     <input type="submit" value="Add blog">
 </form>
+</div>
+
 
 {% endblock content %}

@@ -11,7 +11,7 @@ class Photo (models.Model):
         ('tall', 'Tall'),
         ('wide', 'Wide'),
         ('big', 'Big'),
-        ('Normal', 'Normal'),
+        ('normal', 'Normal'),
     )
     description = models.CharField(null=True, blank=False, max_length=250)
     photo_type = models.CharField(max_length=200, choices = PHOTO_TYPE, null=True)
@@ -23,7 +23,13 @@ class Photo (models.Model):
     def __str__(self):
         return self.description
     
-class PhotoPortfolio(models.Model):
+class PhotoPortfolio(models.Model):   
+    PHOTO_TYPE = (
+        ('wide', 'Wide'),
+        ('big', 'Big'),
+        ('normal', 'Normal'),
+    )
+    photo_type = models.CharField(max_length=200, choices = PHOTO_TYPE, null=True)
     description = models.CharField(null=True, blank=False, max_length=250)
     photo = models.ImageField(upload_to='images/portfolio/', blank=False)
     portfolio = models.ForeignKey(
@@ -36,6 +42,12 @@ class PhotoPortfolio(models.Model):
         return self.description    
     
 class Portfolio(models.Model):
+    PHOTO_TYPE = (
+        ('wide', 'Wide'),
+        ('big', 'Big'),
+        ('normal', 'Normal'),
+    )
+    photo_type = models.CharField(max_length=200, choices = PHOTO_TYPE, null=True)
     name = models.CharField(max_length=255, null=False, blank=False, verbose_name="Portfolio Name")
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           primary_key=True, editable=False)

@@ -17,8 +17,6 @@
     <h1>
         Footmon Details
     </h1>
-    <a href="{% url 'add_blogs' %}">Add blogs</a><br>
-    <a href="{% url 'add_photo' %}">Add Photo</a>
     <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates aspernatur, voluptate ut maxime maiores
         doloremque?
@@ -27,7 +25,7 @@
     <div class="card-section">
         <div class="founder">
             <img src="https://english.onlinekhabar.com/wp-content/uploads/2020/11/married-couple.jpg" alt="">
-            <p>Founder</p>
+            <p>Leader</p>
         </div>
         <div class="portfolio">
             <img src="https://english.onlinekhabar.com/wp-content/uploads/2020/11/married-couple.jpg" alt="">
@@ -97,5 +95,40 @@
 
     </div>
 </div>
+
+<!--offers-->
+<div class="offers">
+    <h1>Packages</h1>
+    <div class="card-section">
+        <div class="package">
+            <p>Package Name</p>
+            <p>Offer/ Cost</p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.querySelector('.founder').addEventListener('click', () => {
+        location.assign("{% url 'about_us' %}");
+    });
+
+    document.querySelector('.portfolio').addEventListener('click', () => {
+        location.assign("{% url 'portfolio' %}")
+    });
+
+    document.querySelector('.blogs').addEventListener('click', () => {
+        location.assign("{% url 'view_blogs' %}");
+    });
+
+    document.querySelector('.contact').addEventListener('click', () => {
+        location.assign("{% url 'contact' %}");
+    }); 
+</script>
+
 {% endblock content %}
 
+{% block footer %} 
+{% include 'footer.html' %}
+
+{% endblock footer %} 

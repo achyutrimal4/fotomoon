@@ -10,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <title>{% block title %} Document {% endblock title %}</title>
 
@@ -35,11 +36,13 @@
     {% block content %} 
     {% endblock content %} 
 
-    {% include 'footer.html' %} 
 
     {% block script %} 
     <script src="{% static 'js/main.js' %}"></script>    
     {% endblock script %}
+
+    {% block footer %} 
+    {% endblock footer %} 
 </body>
 
 </html>

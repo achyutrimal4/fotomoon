@@ -1,14 +1,32 @@
 {% extends 'main.html' %}
 
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock styles %}
+
 {% block content %}
 
 {% include 'navbar.html' %}
 
 <h1>Manage Packages</h1>
+<div class="container">
+    
 <form action="" method="POST" enctype="multipart/form-data" novalidate>
     {% csrf_token %}
-    {{form.as_p}}
+    {% for field in form %}
+    {{field.label_tag}}
+    {{field}}
+
+    {% for error in field.errors %}
+    <small style="color: red">{{error}}</small>
+    {% endfor %}
+    {% endfor %}
+
+
     <input type="submit" value="Add Package" name="" id="">
 
 </form>
+
+</div>
 {% endblock content %}

@@ -13,13 +13,102 @@
 {% include 'navbar.html' %}
 
 
-    {% for blog in blogs %}
-    <h1>{{blog.title}}</h1>
-    <p>{{blog.author}}</p>
-    <p>{{blog.description|slice:100}}</p>
-    <img src="{{blog.image.url}}" alt="" />
-    <p>{{blog.photo_caption}}</p>
-    <p>{{blog.imageBy}}</p>
-    {% endfor %}
+{% for blog in blogs %}
+<h1>{{blog.title}}</h1>
+<p>{{blog.author}}</p>
+<p>{{blog.description|slice:100}}</p>
+<img src="{{blog.image.url}}" alt="" />
+<p>{{blog.photo_caption}}</p>
+<p>{{blog.imageBy}}</p>
+{% endfor %}
+
+<h1>Stories</h1>
+
+
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg'" alt="">
+            <div class="text">
+                <h3>Mr. ABCD and Mrs. ABCD</h3>
+                <h4>Abour their wedding</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam fuga culpa velit officiis. Nisi
+                    a quam eos, nostrum porro aut?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iste illum dolores at similique
+                    esse sapiente sed, quos laborum praesentium qui cupiditate dicta ut. Architecto dolores ipsum
+                    exercitationem minima doloremque nesciunt quos numquam necessitatibus ea.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deleniti adipisci, nam
+                    blanditiis enim quaerat!</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg'" alt="">
+            <div class="text">
+                <h3>Mr. ABCD and Mrs. ABCD</h3>
+                <h4>Abour their wedding</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam fuga culpa velit officiis. Nisi
+                    a quam eos, nostrum porro aut?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iste illum dolores at similique
+                    esse sapiente sed, quos laborum praesentium qui cupiditate dicta ut. Architecto dolores ipsum
+                    exercitationem minima doloremque nesciunt quos numquam necessitatibus ea.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deleniti adipisci, nam
+                    blanditiis enim quaerat!</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg'" alt="">
+            <div class="text">
+                <h3>Mr. ABCD and Mrs. ABCD</h3>
+                <h4>Abour their wedding</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam fuga culpa velit officiis. Nisi
+                    a quam eos, nostrum porro aut?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iste illum dolores at similique
+                    esse sapiente sed, quos laborum praesentium qui cupiditate dicta ut. Architecto dolores ipsum
+                    exercitationem minima doloremque nesciunt quos numquam necessitatibus ea.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deleniti adipisci, nam
+                    blanditiis enim quaerat!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+</script>
 
 {% endblock content %}

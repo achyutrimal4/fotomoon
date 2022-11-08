@@ -50,3 +50,11 @@
 .alert>.alert__close:hover {
     opacity: 0.85;
 }
+
+body{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

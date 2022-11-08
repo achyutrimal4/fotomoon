@@ -6,12 +6,12 @@ from .models import Photo, Portfolio, PhotoPortfolio
 class PhotoForm(ModelForm):
     class Meta:
         model=Photo
-        fields = ['description', 'photo', 'photo_type']
+        fields = ['description', 'photo']
         
 class PortfolioForm(ModelForm):
     class Meta:
         model = Portfolio
-        fields = ['name', 'photo']
+        fields = ['name', 'photo', 'photo_type']
         
 class PhotoPortfolioForm(ModelForm):
     class Meta:

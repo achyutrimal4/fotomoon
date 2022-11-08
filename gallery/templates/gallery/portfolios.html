@@ -10,13 +10,28 @@
 {% block content %}
 
 {% include 'navbar.html' %}
+<div class="container">
+    <h1>Our works</h1>
+    <div class="card-section">
+        {% for portfolio in portfolio %}
+        {% if portfolio.photo_type == 'normal' %}
+        <a href="{% url 'portfolio_description' portfolio.id %}">
+            <div class="card">
+                <img src="{{portfolio.photo.url}}" alt="">
+                <p>{{portfolio.name}}</p>
+            </div>
+        </a>
 
-{% for portfolio in portfolio %}
-<p>{{ portfolio.name }}</p>
-<img src="{{portfolio.photo.url}}" alt="" width="100px"> <br>
-{% endfor %}
+        {% else %}
+        <a href="{% url 'portfolio_description' portfolio.id %}">
+            <div class="card {{portfolio.photo_type}}">
+                <img src="{{portfolio.photo.url}}" alt="">
+                <p>{{portfolio.name}}</p>
+            </div>
+        </a>
 
-<a href="{% url 'manage_portfolio' %}">Manage Portfolio</a>
-
-
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
 {% endblock content %}

@@ -54,3 +54,8 @@ def managePortfolio(request):
 
 def about_us(request):
     return render (request, 'gallery/about.html')
+
+def portfolio_description(request, pk):    
+    portfolioObj = Portfolio.objects.get(id=pk)
+    context = {'portfolio': portfolioObj}
+    return render (request, 'gallery/portfolio_description.html', context)

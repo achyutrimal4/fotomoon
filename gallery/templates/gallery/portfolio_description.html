@@ -1,0 +1,60 @@
+{% extends 'main.html' %}
+
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/portfolio_description.css' %}" />
+{% endblock styles %}
+
+
+
+{% block content %}
+<h1>{{portfolio.name}}</h1>
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        {% for photo in portfolio.photoportfolio_set.all %}
+        <div class="swiper-slide">
+            <div class="container">              
+                <img src="{{photo.photo.url}}" alt="" class="{{photo.photo_type}}}" />               
+            </div>
+            <p>{{photo.description}}</p>
+            
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+{% endblock content %}
+
+{% block script %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+    });
+</script>
+{% endblock script %}
