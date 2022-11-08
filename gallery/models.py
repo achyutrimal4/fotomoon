@@ -42,12 +42,7 @@ class PhotoPortfolio(models.Model):
         return self.description    
     
 class Portfolio(models.Model):
-    PHOTO_TYPE = (
-        ('wide', 'Wide'),
-        ('big', 'Big'),
-        ('normal', 'Normal'),
-    )
-    photo_type = models.CharField(max_length=200, choices = PHOTO_TYPE, null=True)
+   
     name = models.CharField(max_length=255, null=False, blank=False, verbose_name="Portfolio Name")
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           primary_key=True, editable=False)

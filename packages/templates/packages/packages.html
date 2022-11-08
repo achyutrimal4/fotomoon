@@ -1,22 +1,43 @@
 {% extends 'main.html' %}
 
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/packages.css' %}">
+{% endblock styles %}
+
 {% block content %}
 
 {% include 'navbar.html' %}
 
 <h1>Packages</h1>
 
-{% for package in packages %}
-<h2>{{package.title}}</h2>
-<img src="{{package.photo.url}}" alt="" width="10%">
-<p>{{package.description|slice:100}}</p>
-<p>{{package.available}}</p>
-{% if package.available %}
-<p style="color: green;">Available</p>
-{% else %}
-<p style="color:red">Unavailable</p> 
-{% endif %}
-<p>Rs.{{package.price}}</p>
-{% endfor %}
+<div class="container">
+    <div class="packages">
+        {% for package in packages %}
+        <div class="card">
+            <img src="{{package.photo.url}}" alt="">
+            <p>{{package.title}}</p>
+            {% if package.available %}
+            <p style="color: green;">Available</p>
+            {% else %}
+            <p style="color:red">Unavailable</p>
+            {% endif %}
+            <p>Rs.{{package.price}}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+    <h1>Offers</h1>
+    <div class="offers">
+        <div class="card">
+            <p>Dashain and Tihar Offer</p>
+            <p>20% discount on all packages</p>
+        </div>
+        <div class="card">
+            <p>New Year Offer</p>
+            <p>20% discount on all packages</p>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}

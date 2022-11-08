@@ -6,5 +6,5 @@ from .models import Packages
 class PackageForm(ModelForm):
     class Meta:
         model=Packages
-        fields = ['title', 'description', 'available', 'price', 'photo']
+        fields = ['title', 'available', 'price', 'photo']
         

@@ -4,12 +4,14 @@
 
 {% include 'navbar.html' %}
 
-<h1>Admin Panel</h1>
-<a href="{% url 'add_blogs' %}">Manage blogs</a> <br>
-<a href="{% url 'add_photo' %}">Manage Photo</a> <br>
-<a href="{% url 'manage_portfolio' %}">Manage Portfolio</a> <br>
-<a href="{% url 'manage_packages' %}">Manage Packages</a>
 
-{% include 'footer.html' %} 
+<h1>Admin Panel</h1>
+<a href="{% url 'add_blogs' %}" style="color:blue ;">Manage blogs</a> <br>
+<a href="{% url 'add_photo' %}" style="color:blue ;">Manage Photos</a> <br>
+<a href="{% url 'manage_portfolio' %}" style="color:blue ;">Manage Portfolios</a> <br>
+<a href="{% url 'add_portfolio_photo' %}" style="color:blue ">Manage Portfolios' Photos</a> <br>
+<a href="{% url 'manage_packages' %}" style="color:blue ;">Manage Packages</a>
+
+<!-- {% include 'footer.html' %}  -->
 
 {% endblock content %}

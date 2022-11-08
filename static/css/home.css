@@ -40,12 +40,14 @@
    overflow: hidden;
 }
 
-.founder img {
+.card-section img{
    width: 100%;
-   height: 80%;
+   height: 100%;
    margin: 0;
    object-fit: cover;
+   cursor: pointer;
 }
+
 
 .founder p {
    width: 100%;
@@ -213,7 +215,7 @@
 
 .offers {
    width: 100%;
-   height: 30vh;
+   height: fit-content;
    padding: 2em 5em;
    display: flex;
    flex-direction: column;
@@ -230,8 +232,8 @@
 }
 
 .offers .card-section .package {
-   width: auto;
-   height: auto;
+   width: 20em;
+   height: 20em;
    padding: 1.5em 3em;
    background-color: white;
    border-radius: .75em;
@@ -244,6 +246,12 @@
 
 .package p {
    margin: .15em 0;
+}
+
+.offers .card-section .package img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
 }
 
 .package p:first-of-type {

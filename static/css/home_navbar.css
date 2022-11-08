@@ -83,7 +83,7 @@ a:hover {
 #explore {
     position: absolute;
     /* bottom: 10%; */
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%);
     background-color: rgb(212, 0, 255);

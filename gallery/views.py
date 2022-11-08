@@ -3,10 +3,16 @@ from django.contrib import messages
 from . forms import PhotoForm, PortfolioForm, PhotoPortfolioForm
 from .models import Photo, Portfolio, PhotoPortfolio
 from django.contrib.auth.decorators import login_required
+from packages.models import Packages
+from blog.models import Blog
 
 # Create your views here.
 def home(request):
     context={}
+    package = Packages.objects.all().order_by('-created')[0]
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+    blog= Blog.objects.all().order_by('created')[0]
+    context = {'package':package, 'blog':blog, 'portfolio':portfolio}
     return render (request, 'gallery/home.html', context)
 
 @login_required(login_url='login')
@@ -51,6 +57,21 @@ def managePortfolio(request):
             form = PortfolioForm(request.POST, request.FILES)
     context={'form':form}
     return render (request, 'gallery/managePortfolio.html', context)
+
+@login_required(login_url='login')
+def addPortfolioPhoto(request):
+    form = PhotoPortfolioForm()
+    if request.method == 'POST':
+        form = PhotoPortfolioForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'New photo added to the portfolio.')
+            return redirect('portfolio')
+        else:
+            form = PhotoPortfolioForm(request.POST, request.FILES)
+    context = {'form': form}
+    return render(request, 'gallery/add_portfolio_photo.html', context)
+
 
 def about_us(request):
     return render (request, 'gallery/about.html')
