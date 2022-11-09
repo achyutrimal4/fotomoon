@@ -1,17 +1,80 @@
 {% extends 'main.html' %}
 
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/admin_panel.css' %}">
+{% endblock styles %}
+
 {% block content %}
 
 {% include 'navbar.html' %}
 
 
-<h1>Admin Panel</h1>
-<a href="{% url 'add_blogs' %}" style="color:blue ;">Manage blogs</a> <br>
-<a href="{% url 'add_photo' %}" style="color:blue ;">Manage Photos</a> <br>
-<a href="{% url 'manage_portfolio' %}" style="color:blue ;">Manage Portfolios</a> <br>
-<a href="{% url 'add_portfolio_photo' %}" style="color:blue ">Manage Portfolios' Photos</a> <br>
-<a href="{% url 'manage_packages' %}" style="color:blue ;">Manage Packages</a>
 
-<!-- {% include 'footer.html' %}  -->
+
+<div class="container">
+    <div class="sidebar">
+        <a href="{% url 'admin:index' %}" class="baritem bar-button">Admin Site</a>
+        <a href="" class="baritem bar-button" style="display:flex ;">Bookings
+            <div class="circle">
+                <small>{{unread_count}}</small>
+            </div>
+        </a>
+        <a href="" class="baritem bar-button" style="display:flex ;">Contact Mails
+            <div class="circle">
+                <small>{{unread_mails}}</small>
+            </div>
+        </a>
+        <a href="{% url 'add_photo' %}" class="baritem bar-button">Add photos</a>
+        <a href="{% url 'add_portfolio_photo' %}" class="baritem bar-button">Add photos to portfolio</a>
+        <a href="{% url 'add_blogs' %}" class="baritem bar-button">Manage Blogs</a>
+        <a href="{% url 'manage_portfolio' %}" class="baritem bar-button">Manage Portfolio</a>
+        <a href="{% url 'manage_packages' %}" class="baritem bar-button">Manage Packages</a>
+    </div>
+
+    <div class="dashboard-container">
+        <h3>In Numbers</h3>
+      
+
+        <div class="card-container">
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-details">
+                        <i class="fa-solid fa-video"></i>
+                        <p>{{video_count}} Videos</p>
+                        <a href=""> <button class="card-btn"> Add
+                                Video</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-details">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <p>{{news_count}} News </p>
+                        <a href=""> <button class="card-btn"> Add
+                                News</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-details">
+                        <i class="fa-solid fa-users"></i>
+                        <p>{{users_count}} Users</p>
+                        <a href=""> <button class="card-btn"> Users
+                            </button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-details">
+                        <i class="fa-solid fa-image"></i>
+                        <p style="margin-left:15px ;">{{photo_count}} Photos</p>
+                        <a href=""> <button class="card-btn" style="margin-left:15px ;"> Add
+                                Photo</button></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}

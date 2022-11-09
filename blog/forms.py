@@ -9,7 +9,7 @@ class BlogForm (ModelForm):
     class Meta:
         model = Blog
         fields = ['title', 'description', 'image',
-                  'photo_caption', 'author', 'imageBy']
+                  'photo_caption']
         widgets = {
             'description': forms.Textarea(attrs={'class': 'description-input'}),
         }

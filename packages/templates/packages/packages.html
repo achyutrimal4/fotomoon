@@ -17,7 +17,7 @@
         <div class="card">
             <img src="{{package.photo.url}}" alt="">
             <p>{{package.title}}</p>
-            {% if package.available %}
+            {% if package.available == "yes"%}
             <p style="color: green;">Available</p>
             {% else %}
             <p style="color:red">Unavailable</p>
