@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, logout, login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import ContactForm
+from .forms import ContactForm, BookingForm
 
 
 # Login and logout
@@ -54,3 +54,15 @@ def contact (request):
     context={'form': form}
     return render (request, 'users/contact.html', context)
     
+    
+def bookings(request):
+    form = BookingForm()
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Date booked')
+            form = BookingForm()
+            return redirect('bookings')
+    context={'form': form}
+    return render (request, 'users/booking.html', context)

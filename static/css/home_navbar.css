@@ -79,13 +79,23 @@ a:hover {
     cursor: pointer;
     transform: scale(1.25);
 }
-
-#explore {
+.buttons{
     position: absolute;
     /* bottom: 10%; */
     top: 25%;
     left: 50%;
     transform: translate(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#explore, #date {
+    /* position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%); */
     background-color: rgb(212, 0, 255);
     color: white;
     padding: .5em 1.5em;
@@ -96,6 +106,12 @@ a:hover {
     align-items: center;
 }
 
-#explore i {
+#explore i, #date i {
     margin-right: .75em;
+}
+
+#date{
+    left: 60% !important;
+    background-color: green;
+    margin-left: 1em;
 }
