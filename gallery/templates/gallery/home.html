@@ -100,6 +100,7 @@
 <div class="offers">
     <h1>Packages</h1>
     <div class="card-section">
+        {% for package in packages %}
         <div class="package">
             <img src="{{package.photo.url}}" alt="">
             <p>{{package.title}}</p>
@@ -110,6 +111,7 @@
             {% endif %}
             <p>Rs.{{package.price}}</p>
         </div>
+        {% endfor %}
     </div>
 </div>
 

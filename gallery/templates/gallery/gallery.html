@@ -11,23 +11,46 @@
 {% include 'navbar.html' %}
 
 <h1>Captured <span>Moments</span></h1>
-    <div class="container">
-        {% for photo in gallery %}
+<div class="container">
+    {% for photo in gallery %}
 
-        {% if photo.photo_type == 'normal' %}
-        <div class="image">
-            <img src="{{photo.photo.url}}" alt="">
-            <p class="caption">{{photo.description | slice:30}}</p>
-        </div>
-        {% else %}
-        <div class="image {{photo.photo_type}}">
-            <img src="{{photo.photo.url}}" alt="">
-            <p class="caption">{{photo.description | slice:30}}</p>
-        </div>
-        {% endif %}
-        {% endfor %}       
-       
+    {% if photo.photo_type == 'normal' %}
+    <div class="image">
+        <img src="{{photo.photo.url}}" alt="">
+        <p class="caption">{{photo.description | slice:30}}</p>
     </div>
+    {% else %}
+    <div class="image {{photo.photo_type}}">
+        <img src="{{photo.photo.url}}" alt="">
+        <p class="caption">{{photo.description | slice:30}}</p>
+    </div>
+    {% endif %}
+    {% endfor %}   
+</div>
+
+{% if gallery.has_other_pages %}
+<div class="pagination">
+    <ul class="container">
+
+        {% if gallery.has_previous %}
+        <li><a href="?page={{gallery.previous_page_number}}" class="btn"><span style="font-size:12px; color: black;"> &#10094;</span>Prev</a></li>
+        {% endif %}
+
+        {% for page in paginator.page_range %}
+
+        {% if page == gallery.number %}
+        <li><a href="?page={{page}}" class="btn btn--sub">{{page}}</a></li>
+        {% else %}
+        <li><a href="?page={{page}}" class="btn">{{page}}</a></li>
+        {% endif %}
+        {% endfor %}
+
+        {% if gallery.has_next %}
+        <li><a href="?page={{gallery.next_page_number}}" class="btn ">Next <span style="font-size:12px; color: black;"> &#10095;</span> </a></li>
+        {% endif %}
+    </ul>
+</div>
+{% endif %}
 
 
 {% endblock content %}

@@ -92,3 +92,31 @@ span {
 .image:hover .caption{
     opacity: 1;
 }
+
+/*========================*/
+.pagination {
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+}
+
+.pagination > ul {
+  flex-wrap: wrap;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination .btn {
+  color:rgb(85, 85, 85);
+  /* background-color: rgb(211, 203, 203); */
+  padding: .2em .6em;
+  border: 1px solid purple;
+  border-radius: 4px;
+}
+
+.pagination .btn.btn--sub {
+  background-color: purple;
+  color: white;
+}

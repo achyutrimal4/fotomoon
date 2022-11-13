@@ -5,14 +5,15 @@ from .models import Photo, Portfolio, PhotoPortfolio
 from django.contrib.auth.decorators import login_required
 from packages.models import Packages
 from blog.models import Blog
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 # Create your views here.
 def home(request):
     context={}
-    package = Packages.objects.all().order_by('-created')[0]
+    packages= Packages.objects.all().order_by('-created')[0:3]
     portfolio = Portfolio.objects.all().order_by('-created')[0]
     blog= Blog.objects.all().order_by('created')[0]
-    context = {'package':package, 'blog':blog, 'portfolio':portfolio}
+    context = {'packages':packages, 'blog':blog, 'portfolio':portfolio}
     return render (request, 'gallery/home.html', context)
 
 @login_required(login_url='login')
@@ -32,7 +33,37 @@ def add_photo(request):
 
 def gallery(request):
     gallery = Photo.objects.all().order_by('-uploaded')
-    context = {'gallery': gallery}
+
+    
+    # pagination
+    page = request.GET.get('page')
+    results = 6
+    paginator=Paginator(gallery, results)    
+    
+    
+    try:
+        gallery = paginator.page(page)
+    except PageNotAnInteger:
+        page = 1
+        gallery = paginator.page(page)
+    except EmptyPage:
+        page = paginator.num_pages
+        gallery = paginator.page(page)
+        
+    leftIndex = (int(page) - 4)
+    
+    if leftIndex<1:
+        leftIndex=1
+        
+        
+    rightIndex = (int(page)+5)
+    if rightIndex>paginator.num_pages:
+        rightIndex = paginator.num_pages + 1
+        
+    custom_range = range (leftIndex,rightIndex)
+
+    
+    context = {'gallery': gallery, 'paginator': paginator, 'custom_range': custom_range}
     return  render (request, 'gallery/gallery.html', context)
 
 def portfolio(request):
