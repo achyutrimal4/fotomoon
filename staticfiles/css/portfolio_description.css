@@ -1,0 +1,77 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 1.5em auto;
+}
+
+.swiper {
+    width: 80%;
+    height: 75vh;
+    margin: 2.5em auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 88%;
+    height: 90%;
+    /* display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, 48%); */
+    row-gap: .75em;
+    column-gap: .75em;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.container .wide {
+    grid-column: span 2;
+}
+
+.container .tall {
+    grid-row: span 2;
+}
+
+.container .normal {
+    grid-column: span 1;
+    grid-row: span 1;
+}

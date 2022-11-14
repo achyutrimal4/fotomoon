@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+
+{% block title %} View messages {% endblock title %}
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/view_contact.css' %}">
+{% endblock styles %}
+
+
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<div class="container">
+    <h2>Messages</h2>
+
+    {% for message in inbox %}
+    <div class="message-card">
+        <div class="user-details">
+            <p>{{message.full_name}}</p>
+            <p>{{message.phone_number}}</p>
+            <p>{{message.email}}</p>
+        </div>
+        <div class="message">
+            <p>Subject: {{message.subject}}</p>
+            <p>{{message.message}}</p>
+        </div>
+
+        <div class="status">
+            {% if not message.is_read %}
+            <p id="new">New</p>
+            <a href="{% url 'read_inbox' message.id %}">Mark as read <i class="fa-solid fa-check"></i></a>
+            {% else %}
+            <i class="fa-solid fa-check" id="read"></i>
+            {% endif %}
+            <p>{{message.created | date}}</p>
+        </div>
+
+
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}

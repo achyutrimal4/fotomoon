@@ -12,10 +12,15 @@ class ContactForm(ModelForm):
         fields = ['full_name', 'email', 'phone_number', 'subject', 'message']
         
 class BookingForm(ModelForm):
-    
+    message = forms.CharField(widget=forms.Textarea
+                              (attrs=
+                               {'placeholder': 
+                                   'If you want to request for multiple services, mention here. Explain about your event here. '
+                                   }
+                               ))
     class Meta:
         model = Booking
-        fields = ['full_name', 'email', 'phone_number','date']
+        fields = ['full_name', 'email', 'phone_number','date', 'service_type', 'message']
         widgets = {
             'date': DateInput(),
         }

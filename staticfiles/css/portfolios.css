@@ -1,0 +1,74 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 2.5em auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.card-section {
+    width: 100%;
+    display: grid;
+    row-gap: .75em;
+    column-gap: .5em;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: 20em;
+    grid-auto-flow: dense;
+}
+.card-section a{
+    text-decoration: none;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(54, 54, 54, 0.65);
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: .75em 0;
+    font-weight: 600;
+    color: white;
+    text-shadow: .5px .25px white;
+}
+
+.card-section .tall {
+    grid-row: span 2;
+}
+
+.card-section .wide {
+    grid-column: span 2;
+}
+
+.card-section .big {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.card-section .normal {
+    grid-row: span 1;
+    grid-column: span 1;
+}

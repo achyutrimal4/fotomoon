@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+
+
+{% block title %} View Bookings {% endblock title %}
+
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/view_bookings.css' %}">
+{% endblock styles %}
+
+
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<div class="container">
+    <h2>Bookings</h2>
+
+    {% for booking in bookings %}
+    <div class="message-card">
+        <div class="user-details">
+            <p>{{booking.full_name}}</p>
+            <p>{{booking.phone_number}}</p>
+            <p>{{booking.email}}</p>
+        </div>
+        <div class="message">
+            <p>Booking for: {{booking.date}}</p>
+            <p>Service: {{booking.service_type | capfirst}}</p>
+            <p>Message: {{booking.message}}</p>
+        </div>
+
+        <div class="status">
+            {% if not booking.is_confirmed and not booking.is_cancelled  %}
+            <p id="new">New</p>
+            <a href="{% url 'confirm_booking' booking.id %}" id="confirm">Confirm Booking <i class="fa-solid fa-check"></i></a>
+            <a href="{% url 'cancel_booking' booking.id %}" id="cancel">Cancel Booking <i class="fa-solid fa-times"></i></a>
+            {% elif booking.is_confirmed %}
+            <p id="confirmed">Confirmed </i></p>
+            {% else %}
+            <p id="cancelled">Cancelled </i></p>
+
+            {% endif %}
+            <p>{{message.created}}</p>
+        </div>
+
+
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}

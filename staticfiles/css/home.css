@@ -1,0 +1,266 @@
+.details {
+   width: 100%;
+   height: 100vh;
+   box-sizing: border-box;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.details h1 {
+   margin-top: 1.5em;
+   margin-bottom: .25em;
+}
+
+.details .card-section {
+   width: 45%;
+   height: 55%;
+   display: grid;
+   grid-template-columns: 55% 45%;
+   grid-template-rows: repeat(3, 33%);
+   column-gap: 1.5em;
+   row-gap: 1.5em;
+   margin: 3.5em;
+}
+
+.founder {
+   position: relative;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end: 4;
+   width: 100%;
+   height: 100%;
+   border-radius: .75em;
+   box-sizing: .1em .1em .5em grey;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+.card-section img{
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   object-fit: cover;
+   cursor: pointer;
+}
+
+
+.founder p {
+   width: 100%;
+   height: 20%;
+   font-size: 1.25em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+   background-color: rgba(206, 206, 206, 0.445);
+}
+
+.portfolio {
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 3;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   border-radius: .75em;
+   overflow: hidden;
+}
+
+
+.portfolio p {
+   background-color: rgba(206, 206, 206, 0.445);
+   margin: 0;
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.portfolio img {
+   width: 100%;
+   height: 80%;
+}
+
+
+.contact,
+.blogs {
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 3;
+   grid-row-end: 4;
+   width: 48%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   border-radius: .75em;
+   overflow: hidden;
+}
+
+.contact img,
+.blogs img {
+   width: 100%;
+   height: 80%;
+}
+
+.contact p,
+.blogs p {
+   background-color: rgba(206, 206, 206, 0.445);
+   margin: 0;
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.contact {
+   justify-self: start;
+}
+
+.blogs {
+   justify-self: end;
+}
+
+
+.services {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   box-sizing: border-box;
+   padding: 1.5em 3em;
+}
+
+
+.team {
+   width: 100%;
+   height: 55vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   margin: 0;
+   padding: 1.5em 0em;
+}
+
+.team h1 {
+   margin-top: .75em;
+   margin-bottom: 0;
+}
+
+.members {
+   margin: 1.5em 0;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   padding: 0;
+   
+}
+
+
+.member-card {
+   width: 20em;
+   height: 20em;
+   display: flex;
+   margin: 0 .5em;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: .75em;
+}
+
+.member-card img {
+   width: 8em;
+   height: 7.5em;
+   border: .15em solid rgb(212, 0, 255);
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.member-card p:first-of-type {
+   font-weight: 600;
+   font-size: 1.1em;
+   margin: 0.5em 0;
+}
+
+.member-card p:nth-of-type(2) {
+   font-weight: 400;
+   opacity: .7;
+   margin: 0;
+   text-align: center;
+}
+
+.member-card .social {
+   display: flex;
+   width: 30%;
+   margin-top: .85em;
+   justify-content: space-around;
+}
+
+.member-card a {
+   text-decoration: none;
+   color: rgb(163, 163, 163);
+   text-shadow: none;
+}
+
+.offers {
+   width: 100%;
+   height: fit-content;
+   padding: 2em 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   background-color: rgba(206, 206, 206, 0.345);
+}
+
+.offers .card-section {
+   width: 80%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.offers .card-section .package {
+   width: 20em;
+   height: 20em;
+   padding: 1.5em 3em;
+   background-color: white;
+   border-radius: .75em;
+   box-sizing: border-box;
+   box-shadow: .1em .1em .5em grey;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.package p {
+   margin: .15em 0;
+}
+
+.offers .card-section .package img{
+   height: 11em;
+   width: 100%;
+   object-fit: cover;
+}
+
+.package p:first-of-type {
+   font-size: 1.15em;
+   font-weight: 600;
+}
+
+.package p:nth-of-type(2) {
+   color: grey;
+   font-weight: 500;
+   font-size: .95em;
+}

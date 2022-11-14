@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/read_message.css' %}">
+{% endblock styles %}
+
+
+
+{% block content %}
+
+
+{% include 'navbar.html' %}
+
+
+<h1>Read Messages</h1>
+<p>{{inbox.full_name}}</p>
+
+{% endblock content %}
+
+
+

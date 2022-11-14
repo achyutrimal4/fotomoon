@@ -1,0 +1,72 @@
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container  {
+    width: 80%;
+    margin: 1.5em auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+}
+
+.packages{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+.card{
+   width: 20em;
+   height: 20em;
+   border-radius: .25em;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-shadow: .1em .1em .45em grey;
+   pointer-events: none;
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.card p{
+    margin: .35em 0;
+}
+
+.card p:first-of-type{
+    font-weight: 600;
+}
+
+.card p:not(p:first-of-type){
+    color: grey;
+    font-weight: 500;
+}
+
+.offers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offers .card{
+    margin: 0 1.5em;
+}
