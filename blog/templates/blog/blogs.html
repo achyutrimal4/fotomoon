@@ -28,7 +28,7 @@
                 <em>{{blog.photo_caption}}</em>
                 <!-- <small>{{blog.imageBy}}</small> -->
 
-                <p>{{blog.description|linebreaksbr}}</p>
+                <p>{{blog.description|slice:200}}</p>
             </div>
         </div>
         {% endfor %}

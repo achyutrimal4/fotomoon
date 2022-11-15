@@ -52,4 +52,4 @@ class Booking (models.Model):
         return str ( self.full_name) 
     
     class Meta:
-        ordering = ['-created', 'is_confirmed',]
+        ordering = ['is_cancelled', 'is_confirmed', '-created',  ]
