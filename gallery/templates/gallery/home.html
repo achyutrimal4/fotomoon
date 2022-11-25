@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--swiperjs-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -44,6 +46,8 @@
         width: 100%;
         height: 100vh;
         background: url('https://english.onlinekhabar.com/wp-content/uploads/2022/02/fotopasal-e1644463976771.jpg');
+        background-size: cover;
+        background-position: center;
     }
 
     .navbar {
@@ -108,7 +112,7 @@
         padding: .5em 1.5em;
         border-radius: .75em;
         text-decoration: none;
-        box-shadow: .1em .1em .5em grey, -.1em -.1em .5em grey;
+        box-shadow: .1em .1em .25em grey, -.1em -.1em .25em grey;
         display: flex;
         align-items: center;
     }
@@ -141,7 +145,7 @@
         grid-template-rows: repeat(3, 33%);
         column-gap: 1.5em;
         row-gap: 1.5em;
-        margin: 3.5em;
+        margin: 3.5em 0;
     }
 
     .founder {
@@ -369,6 +373,122 @@
         font-weight: 500;
         font-size: .95em;
     }
+
+    /*mobile view*/
+    @media screen and (max-width:480px) {
+        .main-container {
+            background-position: center;
+            background-size: cover;
+            background-position: -90%;
+        }
+
+        #explore {
+            padding: .35em 1.105em;
+            font-size: .95em;
+            box-shadow: none;
+        }
+
+        .details {
+            width: 100% !important;
+            height: auto;
+            padding: 0 !important;
+
+        }
+
+        .details p:first-of-type {
+            text-align: center;
+            font-size: .9em;
+        }
+
+        .card-section {
+            width: 55% !important;
+            height: 60vh !important;
+            display: grid !important;
+            grid-template-columns: repeat(2, 50%) !important;
+            grid-template-rows: repeat(3, 33%) !important;
+            justify-items: center !important;
+            align-content: center !important;
+        }
+
+        .card-section div:first-of-type {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            width: 100%;
+            height: 100%;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .card-section div:nth-of-type(2) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            width: 100%;
+            height: 100%;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .card-section div:nth-of-type(3) {
+            width: 100%;
+            height: 100%;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            justify-self: center;
+        }
+
+        .card-section div:last-of-type {
+            width: 100%;
+            height: 100%;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        .members {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(autofit, minmax(20%, 25%));
+            grid-auto-rows: auto;
+        }
+
+        .team .members {
+            display: none;
+        }
+
+        .team .swiper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper .swiper-wrapper {
+            width: 100%;
+            padding:0 2.5em;
+        }
+
+        .swiper-slide {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .swiper-slide .member-card {
+            width: 80%;
+            font-size: .9em;
+        }     
+
+
+
+    }
 </style>
 
 <body>
@@ -479,6 +599,30 @@
             </div>
 
         </div>
+
+        <!--mobile view only-->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="member-card">
+                        <img src="https://fotomoonnepal.com/upload_files/hari.jpg" alt="">
+                        <p>Rabindra Mishra</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptate magni ullam libero!
+                            Nulla,
+                            voluptas!</p>
+                        <div class="social">
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
     </div>
 
     <!--offers-->
@@ -493,6 +637,7 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
         document.querySelector('.founder').addEventListener('click', () => {
             location.assign('about.html');
@@ -508,7 +653,26 @@
 
         document.querySelector('.contact').addEventListener('click', () => {
             location.assign('contact.html');
-        }); 
+        });
+
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
     </script>
 
 

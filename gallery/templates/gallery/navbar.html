@@ -1,36 +1,72 @@
 <style>
-.navbar {
-    width: 100%;
-    padding: 1em 3em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
+    .navbar {
+        width: 100%;
+        padding: 1em 3em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
 
-.navigation-pane {
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .navigation-pane {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-a {
-    color: rgb(202, 255, 255);
-    text-shadow: .5px .75px black;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-decoration: none;
-}
+    a {
+        color: rgb(202, 255, 255);
+        text-shadow: .5px .75px black;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-decoration: none;
+    }
 
-.social-media{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: grey;
-}
+    .social-media {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: grey;
+    }
+
+    @media screen and (max-width:479px) {
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+            background-color: rgba(26, 26, 26, 0.884);
+        }
+
+        .brand {
+            display: none;
+        }
+
+        .navigation-pane {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        a {
+            color: white;
+            margin: 0 3em;
+        }
+    }
 </style>
 
 
