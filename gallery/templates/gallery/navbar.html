@@ -1,4 +1,6 @@
 <style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+
     .navbar {
         width: 100%;
         padding: 1em 3em;
@@ -32,45 +34,143 @@
         color: grey;
     }
 
-    @media screen and (max-width:479px) {
+    /*mobile view*/
+    @media screen and (max-width:480px) {
 
         body {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            color: white;
-            background-color: rgba(26, 26, 26, 0.884);
         }
 
-        .brand {
-            display: none;
-        }
-
-        .navigation-pane {
-            display: flex;
-            flex-direction: column;
+        .active-body{
             width: 100%;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
+            box-sizing: border-box;
             overflow: hidden;
         }
 
-        a {
-            color: white;
-            margin: 0 3em;
+        .navbar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
         }
+    }
+
+
+    /*tablet view*/
+    @media screen and (max-width:820px) {
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.active-body{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+}
+
+
+
+    .mobile-navbar {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        scroll-behavior: none;
+        background-color: rgba(31, 31, 31, 0.918);
+        transition: display .35s ease-in;
+        z-index: 2;
+    }
+
+    .mobile-navbar body {
+        overflow: hidden;
+        scroll-behavior: none;
+    }
+
+    .navigation-pane {
+        display: none;
+    }
+
+    .social-media {
+        display: none;
+    }
+
+    
+
+    #open-navbar {
+        position: absolute;
+        top: 2.5%;
+        right: 7.5%;
+        font-size: 1.25em;
+        cursor: pointer;
+    }
+
+    #close-navbar{
+        position: absolute;
+        top: 2.5%;
+        right: 7.5%;
+        font-size: 1.25em;
+        cursor: pointer;
+        color: white;   
+        z-index: 5;
+        display: none;
+    }
+
+    .navigation-mobile{
+        width: 80%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 5;
+        color: white;
+    }
+
+    .social-mobile{
+        width: 50%;
+        margin-top: 3.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.25em;
+        z-index: 5;
+        
+    }
+
+    .social-mobile i{
+        color: white;
     }
 </style>
 
 
 <div class="navbar">
+    <i class="fa-solid fa-bars" id="open-navbar"></i>
+    <i class="fa-solid fa-xmark" id="close-navbar"></i>
     <div class="brand">
         <h2>FotoMoon</h2>
     </div>
@@ -90,3 +190,27 @@
         <i class="fa-brands fa-square-youtube"></i>
     </div>
 </div>
+
+
+<script>
+    const navbar = document.querySelector('.navbar');
+    const navigationPane = document.querySelector('.navigation-pane');
+    const social = document.querySelector('.social-media');
+    const openNavbar = document.querySelector('#open-navbar');
+    const closeNavbar = document.querySelector('#close-navbar');
+    openNavbar.addEventListener('click', ()=>{
+       navbar.classList.add('mobile-navbar');
+       navigationPane.classList.add('navigation-mobile');
+       openNavbar.style.display = 'none';
+       closeNavbar.style.display = 'block';
+       social.classList.add('social-mobile');
+    });
+
+    closeNavbar.addEventListener('click', ()=>{
+        navbar.classList.remove('mobile-navbar');
+       navigationPane.classList.remove('navigation-mobile');
+       openNavbar.style.display = 'block';
+       closeNavbar.style.display = 'none';
+       social.classList.remove('social-mobile');
+    });
+</script>
