@@ -12,8 +12,10 @@
 {% include 'home_navbar.html' %}
 
 <div class="landing-section">
-    <button type="submit" id="explore"></button>
-    <button type="submit" id="book"></button>
+    <div class="button-section">
+        <a href="{% url 'bookings' %}">Book a date</a>
+        <button type="submit" id="explore">Explore</button>
+    </div>
 </div>
 
 
@@ -192,4 +194,5 @@
 {% include 'footer.html' %}
 
 {% endblock footer %} 
+
 

@@ -48,7 +48,6 @@ a {
     color: rgb(202, 255, 255);
     font-size: 1.1em;
     font-weight: 600;
-    text-shadow: .075em .075em grey;
     text-decoration: none;
     transition: transform 300ms ease-in;
 }

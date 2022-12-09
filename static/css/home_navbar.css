@@ -85,7 +85,6 @@ a:hover {
 
 .buttons{
     position: absolute;
-    /* bottom: 10%; */
     top: 25%;
     left: 50%;
     transform: translate(-50%);
@@ -94,12 +93,10 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
-
+.buttons .button-section a{
+    text-shadow: none !important;
+}
 #explore, #date {
-    /* position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%); */
     background-color: rgb(212, 0, 255);
     color: white;
     padding: .5em 1.5em;
@@ -115,7 +112,6 @@ a:hover {
 }
 
 #date{
-    left: 60% !important;
     background-color: green;
     margin-left: 1em;
 }
