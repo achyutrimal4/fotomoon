@@ -1,0 +1,730 @@
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 265, in connect
+    self.init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 251, in init_connection_state
+    super().init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 232, in init_connection_state
+    self.check_database_version_supported()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 207, in check_database_version_supported
+    raise NotSupportedError(
+django.db.utils.NotSupportedError: PostgreSQL 11 or later is required (found 9.622).
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 265, in connect
+    self.init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 251, in init_connection_state
+    super().init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 232, in init_connection_state
+    self.check_database_version_supported()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 207, in check_database_version_supported
+    raise NotSupportedError(
+django.db.utils.NotSupportedError: PostgreSQL 11 or later is required (found 9.622).
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 215, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib64/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 215, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib64/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "localhost" (::1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 215, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib64/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 215, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib64/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "localhost" (::1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 215, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib64/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 215, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib64/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "localhost" (::1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5400 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 265, in connect
+    self.init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 251, in init_connection_state
+    super().init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 232, in init_connection_state
+    self.check_database_version_supported()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 207, in check_database_version_supported
+    raise NotSupportedError(
+django.db.utils.NotSupportedError: PostgreSQL 11 or later is required (found 9.622).
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 265, in connect
+    self.init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 251, in init_connection_state
+    super().init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 232, in init_connection_state
+    self.check_database_version_supported()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 207, in check_database_version_supported
+    raise NotSupportedError(
+django.db.utils.NotSupportedError: PostgreSQL 11 or later is required (found 9.622).
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 265, in connect
+    self.init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 251, in init_connection_state
+    super().init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 232, in init_connection_state
+    self.check_database_version_supported()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 207, in check_database_version_supported
+    raise NotSupportedError(
+django.db.utils.NotSupportedError: PostgreSQL 11 or later is required (found 9.622).
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 265, in connect
+    self.init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 251, in init_connection_state
+    super().init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 232, in init_connection_state
+    self.check_database_version_supported()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 207, in check_database_version_supported
+    raise NotSupportedError(
+django.db.utils.NotSupportedError: PostgreSQL 11 or later is required (found 9.622).
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 265, in connect
+    self.init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 251, in init_connection_state
+    super().init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 232, in init_connection_state
+    self.check_database_version_supported()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 207, in check_database_version_supported
+    raise NotSupportedError(
+django.db.utils.NotSupportedError: PostgreSQL 11 or later is required (found 9.622).
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bibekraj/fotomoon/gallery/views.py", line 14, in home
+    portfolio = Portfolio.objects.all().order_by('-created')[0]
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 445, in __getitem__
+    qs._fetch_all()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 265, in connect
+    self.init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/postgresql/base.py", line 251, in init_connection_state
+    super().init_connection_state()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 232, in init_connection_state
+    self.check_database_version_supported()
+  File "/home/bibekraj/virtualenv/fotomoon/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 207, in check_database_version_supported
+    raise NotSupportedError(
+django.db.utils.NotSupportedError: PostgreSQL 11 or later is required (found 9.622).
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /favicon.ico
+Not Found: /apple-touch-icon-120x120-precomposed.png
+Not Found: /apple-touch-icon-120x120.png
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /apple-touch-icon.png
+Not Found: /favicon.ico
+Not Found: /apple-touch-icon-120x120-precomposed.png
+Not Found: /apple-touch-icon-120x120.png
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /apple-touch-icon.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /favicon.ico
+Not Found: /apple-touch-icon.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[UID:1684][3168221] Child process with pid: 3168236 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+[UID:1684][2045514] Child process with pid: 2046983 was killed by signal: 15, core dumped: no
+[UID:1684][2045514] Child process with pid: 2046991 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+[UID:1684][2045514] Child process with pid: 2047036 was killed by signal: 15, core dumped: no
+[UID:1684][2045514] Child process with pid: 2046997 was killed by signal: 15, core dumped: no
+[UID:1684][2045514] Child process with pid: 2045540 was killed by signal: 15, core dumped: no
+OSError: LSAPI: File error
+[UID:1684][2045514] Child process with pid: 2052914 was killed by signal: 15, core dumped: no
+OSError: LSAPI: File error
+[UID:1684][2045514] Child process with pid: 2057942 was killed by signal: 15, core dumped: no
+[UID:1684][2045514] Child process with pid: 2058497 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.png
+Not Found: /favicon.png
+Not Found: /favicon.png
+Not Found: /image/bubble_point_yellow.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.png
+Not Found: /favicon.png
+Not Found: /favicon.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.png
+Not Found: /favicon.png
+[UID:1684][2976648] Child process with pid: 2980802 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+[UID:1684][2138861] Child process with pid: 2138898 was killed by signal: 15, core dumped: no
+OSError: LSAPI: File error
+[UID:1684][2138861] Child process with pid: 2140392 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[UID:1684][3523650] Child process with pid: 3523660 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[UID:1684][3701980] Child process with pid: 3702068 was killed by signal: 15, core dumped: no
+[UID:1684][3701980] Child process with pid: 3702563 was killed by signal: 15, core dumped: no
+[UID:1684][3740038] Child process with pid: 3740356 was killed by signal: 15, core dumped: no
+[UID:1684][3740038] Child process with pid: 3740059 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[UID:1684][53070] Child process with pid: 53104 was killed by signal: 15, core dumped: no
+[UID:1684][53070] Child process with pid: 53150 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+OSError: LSAPI: File error
+[UID:1684][2876772] Child process with pid: 2876797 was killed by signal: 15, core dumped: no
+[UID:1684][3640554] Child process with pid: 3640582 was killed by signal: 15, core dumped: no
+[UID:1684][3640554] Child process with pid: 3642917 was killed by signal: 15, core dumped: no
+[UID:1684][3640554] Child process with pid: 3640599 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /favicon.ico
+Not Found: /apple-touch-icon.png
+[UID:1684][1664136] Child process with pid: 1664278 was killed by signal: 15, core dumped: no
+[UID:1684][1664136] Child process with pid: 1680651 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[UID:1684][2024127] Child process with pid: 2040492 was killed by signal: 15, core dumped: no
+OSError: LSAPI: File error
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[UID:1684][2150005] Child process with pid: 2150321 was killed by signal: 15, core dumped: no
+[UID:1684][2255788] Child process with pid: 2292293 was killed by signal: 15, core dumped: no
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[UID:1684][602166] Child process with pid: 602193 was killed by signal: 15, core dumped: no
+[UID:1684][913490] Child process with pid: 913547 was killed by signal: 15, core dumped: no
+[UID:1684][913490] Child process with pid: 914263 was killed by signal: 15, core dumped: no
+[UID:1684][913490] Child process with pid: 914444 was killed by signal: 15, core dumped: no
+[UID:1684][913490] Child process with pid: 913509 was killed by signal: 15, core dumped: no
+[UID:1684][1018337] Child process with pid: 1018355 was killed by signal: 15, core dumped: no
+[UID:1684][1018337] Child process with pid: 1018379 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+[UID:1684][1018337] Child process with pid: 1018416 was killed by signal: 15, core dumped: no
+[UID:1684][1018337] Child process with pid: 1018460 was killed by signal: 15, core dumped: no
+OSError: LSAPI: File error
+[UID:1684][3483958] Child process with pid: 3484054 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[UID:1684][4177032] Child process with pid: 4177053 was killed by signal: 15, core dumped: no
+[UID:1684][4177032] Child process with pid: 4177300 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[UID:1684][146925] Child process with pid: 146949 was killed by signal: 15, core dumped: no
+[UID:1684][146925] Child process with pid: 148045 was killed by signal: 15, core dumped: no
+[UID:1684][146925] Child process with pid: 147941 was killed by signal: 15, core dumped: no
+[UID:1684][146925] Child process with pid: 151553 was killed by signal: 15, core dumped: no
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+[UID:1684][146925] Child process with pid: 195788 was killed by signal: 15, core dumped: no
+[UID:1684][146925] Child process with pid: 196173 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+[UID:1684][3881903] Child process with pid: 3882249 was killed by signal: 15, core dumped: no
+[UID:1684][3881903] Child process with pid: 3882472 was killed by signal: 15, core dumped: no
+[UID:1684][3881903] Child process with pid: 3890502 was killed by signal: 15, core dumped: no
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+[UID:1684][3881903] Child process with pid: 4019678 was killed by signal: 15, core dumped: no
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+OSError: LSAPI: File error
+OSError: LSAPI: File error
+OSError: LSAPI: File error
+Not Found: /favicon.ico
+Not Found: /favicon.ico

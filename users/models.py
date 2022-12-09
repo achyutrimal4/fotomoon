@@ -7,7 +7,7 @@ import uuid
 class ContactMail (models.Model):
     full_name = models.CharField(max_length=255, null=True, blank=False, verbose_name='Name')
     email = models.EmailField(max_length=200, null=True, blank=False)
-    phone_number = models.IntegerField()
+    phone_number = models.CharField(max_length=200, null=True, blank=False)
     subject = models.CharField(max_length=200, null=True, blank=False)
     message = models.TextField()
     is_read = models.BooleanField(default=False, null=True)
@@ -39,7 +39,7 @@ class Booking (models.Model):
     service_type = models.CharField(max_length=250, choices =SERVICES, null=True)
     full_name = models.CharField(max_length=255, null=True, blank=False, verbose_name='Name')
     email = models.EmailField(max_length=200, null=True, blank=False)
-    phone_number = models.IntegerField()
+    phone_number = models.CharField(max_length=200, null=True, blank=False)
     date = models.DateField(verbose_name="Select Date")
     message = models.TextField(null=True)
     is_confirmed = models.BooleanField(default=False)

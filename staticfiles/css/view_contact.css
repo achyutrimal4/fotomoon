@@ -37,7 +37,7 @@ h1{
 .message-card .message{
     display: flex;
     flex-direction: column;
-    width: 50em;
+    width: 45em;
     margin-right: 3em;
     padding: 0;
 }

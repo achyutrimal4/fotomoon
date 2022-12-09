@@ -76,3 +76,59 @@ h1{
     color: grey;
     font-weight: 500;
 }
+
+        @media screen and (max-width:480px){
+
+            .swiper{
+                height: auto;
+            }
+
+            .swiper-slide {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .swiper-slide img{
+                width: 100%;
+                height: 48.5%;
+            }
+
+           
+
+            .swiper-slide .text{
+                width: 65%;
+                height: 45%;
+                font-size: .75em;
+            }
+
+            .text p{
+                margin:.5em 0;
+            }
+            
+        }
+
+
+        /*tablet view*/
+        @media screen and (max-width:820px){
+            .swiper-wrapper{
+                height: auto;
+            }
+
+            .swiper-slide{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .swiper-slide img{
+                width:80%;
+                height: 50%;
+            }
+
+            .swiper-slide .text{
+              width: 80%;
+              font-size: .9em;
+              height: 40%;
+            }
+        }

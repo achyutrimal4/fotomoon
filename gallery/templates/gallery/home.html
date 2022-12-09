@@ -11,7 +11,10 @@
 {% block content %}
 {% include 'home_navbar.html' %}
 
-
+<div class="landing-section">
+    <button type="submit" id="explore"></button>
+    <button type="submit" id="book"></button>
+</div>
 
 
 <!--details-->
@@ -44,9 +47,32 @@
     </div>
 </div>
 
+
+
 <!--Our Team-->
 <div class="team">
     <h1>Meet our team</h1>
+    <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="member-card">
+                        <img src="https://fotomoonnepal.com/upload_files/hari.jpg" alt="">
+                        <p>Rabindra Mishra</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptate magni ullam libero!
+                            Nulla,
+                            voluptas!</p>
+                        <div class="social">
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    </div>
 
     <div class="members">
         <div class="member-card">
@@ -101,7 +127,7 @@
 <!--offers-->
 <div class="offers">
     <h1>Packages</h1>
-    <div class="card-section">
+    <div class="offers-card-section">
         {% for package in packages %}
         <div class="package">
             <img src="{{package.photo.url}}" alt="">
@@ -118,7 +144,14 @@
 </div>
 
 
+{% endblock content %}
+
+
+{% block script %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 <script>
+
     document.querySelector('.founder').addEventListener('click', () => {
         location.assign("{% url 'about_us' %}");
     });
@@ -134,11 +167,29 @@
     document.querySelector('.contact').addEventListener('click', () => {
         location.assign("{% url 'contact' %}");
     }); 
-</script>
 
-{% endblock content %}
+    const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+</script>
+{% endblock script %}
 
 {% block footer %} 
 {% include 'footer.html' %}
 
 {% endblock footer %} 
+

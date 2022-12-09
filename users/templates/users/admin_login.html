@@ -11,17 +11,15 @@
 {% block content%}
 
 <div class="container">
+    
+    <form action="{% url 'login' %}" method="POST" id='admin-login'>
+         <h2>Login </h2> <a href="{% url 'home' %}" style="text-decoration:none; color:purple"><i class="fa-solid fa-house"></i> &nbsp; Home</a>
 
-  <form class="default-form" method="POST" novalidate>
-
-    <h2>Login </h2>
-    <form action="{% url 'login' %}" method="POST">
       {% csrf_token %}
       <input type="text" name="username" placeholder="Username">
       <input type="password" name="password" id="" placeholder="Password">
       <input type="submit" name="" id="" value="Login">
     </form>
-  </form>
 </div>
 
 {% endblock content %}

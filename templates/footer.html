@@ -8,16 +8,12 @@
     .footer {
         width: 100%;
         height: auto;
-        padding: 1.5em 3em;
         background-color: rgb(24, 20, 20);
         display: flex;
         justify-content: space-around;
-        /* margin-top: 50em; */
         align-items: center;
         font-size: 1.15em;
         color: white;
-        /* position: absolute;
-        bottom: 0; */
     }
 
     .footer .social {
@@ -31,6 +27,39 @@
         text-decoration: none;
         text-shadow: none;
         font-size: 1.15em;
+    }
+    
+    @media screen and (max-width:480px){
+        .footer{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items :center;
+            font-size:.85em;
+            width:100%;
+            height:auto;
+            overflow:hidden;
+            padding:0;
+        }
+        
+        .footer p{
+            margin :.25em 0;
+        }
+        
+        .social{
+            width :100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        
+        .social a:not(a:last-of-type){
+            margin-right:.25em;
+        }
+    }
+
+    @media screen and (max-width:840px){
+        
     }
 </style>
 

@@ -31,3 +31,11 @@ input:last-of-type {
     text-shadow: .15em .15em grey;
     cursor: pointer;
 }
+
+
+#admin-login{
+    position:absolute;
+    left:50%;
+    top:25%;
+    transform:translateX(-50%);
+}

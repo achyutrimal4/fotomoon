@@ -69,3 +69,61 @@ img {
 .developers span{
     margin:1em;
 }
+
+
+    /*mobile view*/
+    @media screen and (max-width:480px){
+        body{
+            height: auto;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 88%;
+        }
+
+        h1{
+            margin-bottom: .25em;
+        }
+
+        .container img{
+            width: 100%;
+        }
+
+        .container .text{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            font-size: .88em;
+        }
+
+        .social a {
+            margin-right: .75em;
+        }
+    }
+
+    /*tablet view*/
+    @media screen and (max-width:820px){
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+        }
+
+
+        h1 {
+            margin: 0;
+            margin-bottom: .25em;
+        }
+
+        .container img{
+            width: 100%;
+        }
+
+        .text {
+            width: 100%;
+            margin: 0;
+            font-size: .95em;
+        }
+    }
