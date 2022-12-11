@@ -43,9 +43,6 @@ h1 {
 .container {
     width: 88%;
     height: 90%;
-    /* display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: repeat(2, 48%); */
     row-gap: .75em;
     column-gap: .75em;
     justify-content: center;

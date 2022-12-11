@@ -10,7 +10,7 @@ html {
 .brand {
     color: white;
     font-weight: 700;
-    font-size: 1.25em;
+    font-size: 1.15em;
     text-shadow: .05em .05em grey;
     margin: 0;
 }
@@ -48,6 +48,7 @@ a {
     color: rgb(202, 255, 255);
     font-size: 1.1em;
     font-weight: 600;
+    text-shadow: .075em .075em grey;
     text-decoration: none;
     transition: transform 300ms ease-in;
 }
@@ -62,7 +63,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     color: grey;
-    font-size: 1.5rem;
+    font-size: 1.15em;
 }
 
 .social-media i {
@@ -89,32 +90,8 @@ a:hover {
     align-items: center;
 }
 
-#explore,
-#date {
-    /* position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%); */
-    background-color: rgb(212, 0, 255);
-    color: white;
-    padding: .5em 1.5em;
-    border-radius: .75em;
-    text-decoration: none;
-    box-shadow: .1em .1em .5em grey, -.1em -.1em .5em grey;
-    display: flex;
-    align-items: center;
-}
 
-#explore i,
-#date i {
-    margin-right: .75em;
-}
 
-#date {
-    left: 60% !important;
-    background-color: green;
-    margin-left: 1em;
-}
 
 /* =============================================== */
 /*mobile view*/
@@ -142,7 +119,7 @@ a:hover {
         width: 100%;
         margin: 0;
         padding: 0;
-        height: 100vh;
+        height: auto;
     }
 
     #open-navbar,
@@ -190,7 +167,7 @@ a:hover {
         width: 100%;
         margin: 0;
         padding: 0;
-        height: 100vh;
+        height: auto;
     }
 
     #open-navbar,
@@ -226,8 +203,6 @@ a:hover {
     .social-media {
         display: none;
     }
-
-
 
     #open-navbar {
         position: absolute;
@@ -276,7 +251,6 @@ a:hover {
 
     .buttons {
         position: absolute;
-        /* bottom: 10%; */
         top: 6%;
         left: 50%;
         transform: translate(-50%);
@@ -286,25 +260,6 @@ a:hover {
         align-items: center;
     }
 
-    #explore,
-    #date {
-        background-color: rgb(212, 0, 255);
-        color: white;
-        padding: .25em .5em;
-        border-radius: .25em;
-        text-decoration: none;
-        box-shadow: none;
-        display: flex;
-        align-items: center;
-    }
-    #date{
-        background-color: green;
-    }
-
-    #explore i,
-    #date i {
-        margin-right: .75em;
-    }
     .brand {
         color: white;
         font-weight: 500;
@@ -312,6 +267,4 @@ a:hover {
         text-shadow: .05em .05em grey;
         display:none;
     }
-
-
 }

@@ -22,12 +22,9 @@
         <!-- Slides -->
         {% for blog in blogs %}
         <div class="swiper-slide">
+            <img src="{{blog.image.url}}" alt="">
             <div class="text">
                 <h3>{{blog.title}}</h3>
-                <img src="{{blog.image.url}}" alt="">
-                <em>{{blog.photo_caption}}</em>
-                <!-- <small>{{blog.imageBy}}</small> -->
-
                 <p>{{blog.description|slice:200}}</p>
             </div>
         </div>
